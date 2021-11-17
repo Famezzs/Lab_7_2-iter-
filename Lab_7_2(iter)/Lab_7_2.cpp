@@ -87,8 +87,7 @@ void Print(int **a, const int rowCount, const int colCount)
 
 void SumOddColMax(int **a, const int rowCount, const int colCount, int &S)
 {
-	int z = 0;
-	for (int col = 0; z < colCount / 2.; col += 2)
+	for (int col = 0; col < colCount; col += 2)
 	{
 		int max = a[0][col];
 		for (int row = 0; row < rowCount; row++)
@@ -98,7 +97,6 @@ void SumOddColMax(int **a, const int rowCount, const int colCount, int &S)
 		}
 
 		S += max;
-		z++;
 	}
 		
 }
